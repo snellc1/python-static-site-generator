@@ -29,7 +29,7 @@ class Content(Mapping):
         self.data["type"] = type
 
     def __getitem__(self, key):
-        return self.data["key"]
+        return self.data[key]
 
     def __iter__(self):
         self.data.__iter__()
@@ -37,7 +37,7 @@ class Content(Mapping):
     def __len__(self):
         return self.data
     
-    
+
     
 
     
