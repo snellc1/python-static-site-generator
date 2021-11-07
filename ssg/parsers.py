@@ -5,7 +5,7 @@ from pathlib import Path
 
 import sys
 from docutils.core import publish_parts 
-from markdown import markdown
+from markdown import extensions, markdown
 from content import Content
 
 class Parser:
@@ -35,3 +35,6 @@ class ResourceParser(Parser):
 
     def parse(self, path, source, dest):
         self.copy(path, source, dest)
+
+class MarkdownParser(Parser):
+    extensions = [".md", ".markdown"]
